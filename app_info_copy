@@ -1,0 +1,236 @@
+{
+  "xp": 150,
+  "spentXp": 0,
+  "level": 2,
+  "streak": 1,
+  "lastDate": "Mon Mar 30 2026",
+  "sessions": 2,
+  "apiKey": "",
+  "activeCampaign": "phd",
+  "activeTaskId": "t_1774872884402",
+  "activeTaskCamp": "teaching",
+  "activeTab": "quests",
+  "showArchive": false,
+  "campaigns": {
+    "phd": {
+      "sections": [
+        {
+          "id": "s_1774811113525",
+          "name": "MG summary"
+        }
+      ],
+      "activeSection": "s_1774811113525",
+      "tasks": [
+        {
+          "timeEstimate": 0,
+          "priority": "normal",
+          "notes": "",
+          "recurring": null,
+          "actualMinutes": 0,
+          "id": "t_1774811134532",
+          "sectionId": "s_1774811113525",
+          "text": "Read 1 MG paper",
+          "type": "research",
+          "xp": 35,
+          "done": true,
+          "wordTarget": null,
+          "dueDate": null,
+          "blocked": false
+        },
+        {
+          "timeEstimate": 0,
+          "priority": "normal",
+          "notes": "",
+          "recurring": null,
+          "actualMinutes": 0,
+          "id": "t_1774811156352",
+          "sectionId": "s_1774811113525",
+          "text": "Write 2 sections of MG summary",
+          "type": "write",
+          "xp": 60,
+          "done": false,
+          "wordTarget": null,
+          "dueDate": null,
+          "blocked": false
+        },
+        {
+          "timeEstimate": 0,
+          "priority": "normal",
+          "notes": "",
+          "recurring": null,
+          "actualMinutes": 0,
+          "id": "t_1774872215670",
+          "sectionId": "s_1774811113525",
+          "text": "Read Zhang \"Why Financial markets remain marginally inefficient\"",
+          "type": "research",
+          "xp": 35,
+          "done": true,
+          "wordTarget": null,
+          "dueDate": null,
+          "blocked": false
+        }
+      ],
+      "xpEarned": 150
+    },
+    "teaching": {
+      "sections": [],
+      "activeSection": "all",
+      "tasks": [
+        {
+          "timeEstimate": 0,
+          "priority": "normal",
+          "notes": "",
+          "recurring": null,
+          "actualMinutes": 0,
+          "id": "t_1774811179374",
+          "sectionId": null,
+          "text": "Update Corp Fin Moodle",
+          "type": "prep",
+          "xp": 30,
+          "done": false,
+          "wordTarget": null,
+          "dueDate": null,
+          "blocked": false
+        },
+        {
+          "timeEstimate": 0,
+          "priority": "normal",
+          "notes": "",
+          "recurring": null,
+          "actualMinutes": 0,
+          "id": "t_1774811197315",
+          "sectionId": null,
+          "text": "Mark MFM submissions",
+          "type": "mark",
+          "xp": 45,
+          "done": false,
+          "wordTarget": null,
+          "dueDate": null,
+          "blocked": false
+        },
+        {
+          "timeEstimate": 0,
+          "priority": "normal",
+          "notes": "",
+          "recurring": null,
+          "actualMinutes": 0,
+          "id": "t_1774811241609",
+          "sectionId": null,
+          "text": "Send email about Maths and Stats",
+          "type": "admin",
+          "xp": 20,
+          "done": false,
+          "wordTarget": null,
+          "dueDate": null,
+          "blocked": false
+        },
+        {
+          "timeEstimate": 0,
+          "priority": "normal",
+          "notes": "",
+          "recurring": null,
+          "actualMinutes": 0,
+          "id": "t_1774872884402",
+          "sectionId": null,
+          "text": "Set up marking rubric for mom",
+          "type": "admin",
+          "xp": 20,
+          "done": false,
+          "wordTarget": null,
+          "dueDate": "2026-03-31",
+          "blocked": false
+        }
+      ],
+      "xpEarned": 0
+    },
+    "trading": {
+      "sections": [
+        {
+          "id": "s_1774811274584",
+          "name": "Market Impact"
+        }
+      ],
+      "activeSection": "s_1774811274584",
+      "tasks": [
+        {
+          "timeEstimate": 0,
+          "priority": "normal",
+          "notes": "",
+          "recurring": null,
+          "actualMinutes": 0,
+          "id": "t_1774811298251",
+          "sectionId": "s_1774811274584",
+          "text": "Finish Bouchard long paper",
+          "type": "research",
+          "xp": 40,
+          "done": false,
+          "wordTarget": null,
+          "dueDate": null,
+          "blocked": false
+        }
+      ],
+      "xpEarned": 0
+    },
+    "cake": {
+      "sections": [],
+      "activeSection": "all",
+      "tasks": [],
+      "xpEarned": 0
+    }
+  },
+  "rewards": [
+    {
+      "id": "r_def1",
+      "emoji": "🍷",
+      "name": "Glass of wine",
+      "desc": "A proper Rioja — well deserved",
+      "cost": 75,
+      "redeemed": 0
+    },
+    {
+      "id": "r_def2",
+      "emoji": "🎬",
+      "name": "Film night",
+      "desc": "Pick something indulgent, no guilt",
+      "cost": 120,
+      "redeemed": 0
+    },
+    {
+      "id": "r_def3",
+      "emoji": "🍕",
+      "name": "Takeaway night",
+      "desc": "No cooking, no cleaning",
+      "cost": 100,
+      "redeemed": 0
+    },
+    {
+      "id": "r_def4",
+      "emoji": "🛁",
+      "name": "Long bath",
+      "desc": "Phone away, candles on",
+      "cost": 60,
+      "redeemed": 0
+    },
+    {
+      "id": "r_1774811383774",
+      "emoji": "📖",
+      "name": "Reading",
+      "desc": "Spend some time reading",
+      "cost": 50,
+      "redeemed": 0
+    }
+  ],
+  "redemptions": [],
+  "dailyLog": {},
+  "intentions": {
+    "date": "2026-03-30",
+    "items": [
+      "Write a MG section: focus on extending the pricing paragraph and finish the dollar game paragraph",
+      "MFM marking rubric installed"
+    ]
+  },
+  "weeklyReview": {
+    "lastDate": "2026-03-30",
+    "focus": "I want to try to finish a chapter on the MG for my thesis, finish reviewing market impact papers for trading research, mark the student papers for Multinational Financial Management, update the BBK Moodle for Corp Finance and prepare one of the classes for next term.  Cakes business, just continue doing some running tasks for the moment"
+  }
+}
