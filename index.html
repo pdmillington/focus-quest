@@ -407,7 +407,7 @@ let state={
   intentions:{date:null,items:[]},
   weeklyReview:{lastDate:null,focus:''},
 };
-let timer={interval:null,seconds:25*60,mode:'focus',running:false};
+let timer={interval:null,seconds:25*60,mode:'focus',running:false,endTime:null};
 let addSecOpen=false,coachMsg='',toastT=null,editingRewardEmoji='🍷';
 let dragSrcId=null;
 
@@ -578,21 +578,35 @@ function onDrop(e,id){
 }
 
 // Timer
-function setTimerMode(mode,mins){if(timer.running)return;timer.mode=mode;timer.seconds=mins*60;renderCampBody();}
+function setTimerMode(mode,mins){if(timer.running)return;timer.mode=mode;timer.seconds=mins*60;timer.endTime=null;renderCampBody();}
 function toggleTimer(){
-  if(timer.running){clearInterval(timer.interval);timer.running=false;renderCampBody();}
-  else{timer.running=true;timer.interval=setInterval(timerTick,1000);renderCampBody();showStaticNudge();}
-}
-function resetTimer(){clearInterval(timer.interval);timer.running=false;timer.seconds=timer.mode==='focus'?25*60:timer.mode==='short'?5*60:15*60;renderCampBody();}
-function timerTick(){
-  timer.seconds--;updateTimerDisplay();
-  if(timer.seconds<=0){
+  if(timer.running){
     clearInterval(timer.interval);timer.running=false;
+    // save remaining seconds from timestamp
+    timer.seconds=Math.max(0,Math.round((timer.endTime-Date.now())/1000));
+    timer.endTime=null;renderCampBody();
+  } else {
+    timer.endTime=Date.now()+timer.seconds*1000;
+    timer.running=true;timer.interval=setInterval(timerTick,500);
+    renderCampBody();showStaticNudge();
+  }
+}
+function resetTimer(){
+  clearInterval(timer.interval);timer.running=false;timer.endTime=null;
+  timer.seconds=timer.mode==='focus'?25*60:timer.mode==='short'?5*60:15*60;
+  renderCampBody();
+}
+function timerTick(){
+  if(!timer.endTime)return;
+  const remaining=Math.max(0,Math.round((timer.endTime-Date.now())/1000));
+  timer.seconds=remaining;
+  updateTimerDisplay();
+  if(remaining<=0){
+    clearInterval(timer.interval);timer.running=false;timer.endTime=null;
     if(timer.mode==='focus'){
       state.sessions++;const k=state.activeTaskCamp||state.activeCampaign;
       const xp=CAMPS[k].sessionXp;awardXP(xp,k,25);
       logDay(0,0,1,25,k);
-      // accumulate actual time on active task
       const at=getActiveTask();if(at){at.actualMinutes=(at.actualMinutes||0)+25;save();}
       showToast('+'+xp+' XP · Focus session complete! 🎯');
       if(at)setTimeout(()=>{if(confirm('Did you finish "'+at.text+'"?'))completeTask(at.id);},300);
@@ -943,5 +957,8 @@ function closeLevelUp(){document.getElementById('level-modal').classList.remove(
 load();showStaticNudge();render();
 checkIntentions();checkWeeklyReview();
 </script>
+</body>
+</html>
+
 </body>
 </html>
